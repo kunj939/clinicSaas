@@ -1,0 +1,23 @@
+{
+  "name": "doctor-clinic-saas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant doctor clinic SaaS: WhatsApp serial tokens, reception queue, doctor workflow, reports.",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "devDependencies": {
+    "vite": "^7.3.7"
+  },
+  "scripts": {
+    "dev:api": "npm run dev -w @clinic/api",
+    "dev:web": "npm run dev -w @clinic/web",
+    "build": "npm run build -w @clinic/api && npm run build -w @clinic/web",
+    "typecheck": "npm run typecheck -w @clinic/api && npm run typecheck -w @clinic/web",
+    "test": "npm run test -w @clinic/api && npm run test -w @clinic/web"
+  }
+}
